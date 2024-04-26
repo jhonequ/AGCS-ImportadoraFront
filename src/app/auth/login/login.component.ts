@@ -32,9 +32,16 @@ export class LoginComponent implements OnInit {
   login(){
     if(this.loginForm.valid){
       this.loginError="";
-      /*this.loginService.login(this.loginForm.value as LoginRequest).subscribe({
+      var dataLogin = this.loginForm.value as LoginRequest;
+      this.loginService.login(dataLogin).subscribe({
         next: (userData) => {
-          console.log(userData);
+          if (dataLogin.email.toUpperCase() === userData.email.toUpperCase()){
+            console.log("correo igual");
+            console.log(userData);
+          }
+          else{
+            this.loginError = "Usuario o contraseña incorrecta"
+          }
         },
         error: (errorData) => {
           console.error(errorData);
@@ -45,7 +52,7 @@ export class LoginComponent implements OnInit {
           this.router.navigateByUrl('/inicio');
           this.loginForm.reset();
         }
-      })*/
+      })
 
     }
     else{

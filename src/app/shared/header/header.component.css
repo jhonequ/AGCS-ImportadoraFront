@@ -1,3 +1,11 @@
 header {
-  background: url(https://cdn.pixabay.com/photo/2020/05/07/04/01/digitization-5140071_1280.jpg)
+  background: url(https://media.istockphoto.com/id/1418267688/es/foto/vista-a%C3%A9rea-de-arriba-hacia-abajo-de-un-gran-buque-de-carga-de-contenedores-con-espacio-de.jpg?s=1024x1024&w=is&k=20&c=c9rq8_Leiz8eXEKsfYiSPK7L41vrvWmdcBf5TlmpOWg=);
+  background-size: cover;
+  background-position: center;
+}
+
+#TextHeader{
+  text-align: left;
+  text-shadow: 2cm;
+  font-family: fantasy;
 }

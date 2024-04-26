@@ -3,6 +3,7 @@
   "id": "1",
   "name":"jhon",
   "lastName":"Rojas",
-  "email":"jhon@gmail.com",
-  "rol": "admin"
+  "email":"prueba@gmail.com",
+  "rol": "admin",
+  "password": "1234"
 }

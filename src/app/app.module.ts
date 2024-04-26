@@ -9,6 +9,11 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { LoginComponent } from './auth/login/login.component';
 import { NavComponent } from './shared/nav/nav.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { VentasComponent } from './pages/ventas/ventas.component';
+import { ImportacionesComponent } from './pages/importaciones/importaciones.component';
+import { ProductosComponent } from './pages/productos/productos.component';
+import { UsuariosComponent } from './pages/usuarios/usuarios.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +22,17 @@ import { ReactiveFormsModule } from '@angular/forms';
     FooterComponent,
     DashboardComponent,
     LoginComponent,
-    NavComponent
+    NavComponent,
+    VentasComponent,
+    ImportacionesComponent,
+    ProductosComponent,
+    UsuariosComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
