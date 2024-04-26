@@ -1,0 +1,8 @@
+{
+  "message":"Autenticación ok",
+  "id": "1",
+  "name":"jhon",
+  "lastName":"Rojas",
+  "email":"jhon@gmail.com",
+  "rol": "admin"
+}
