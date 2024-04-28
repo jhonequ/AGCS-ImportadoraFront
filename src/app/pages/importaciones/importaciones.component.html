@@ -1,1 +1,62 @@
-<p>importaciones works!</p>
+<app-nav></app-nav>
+<div class="container">
+    <div class="row">
+        <div class=" card">
+            <div class="card-body">
+                <h1>Crear Importación</h1>
+                <span>{{formImportaciones.value | json }}</span>
+                <form [formGroup]="formImportaciones" class="row g-3" (ngSubmit)="crearImportacion()">
+
+                    <div class="col-md-6">
+                        <label for="idUsuario" class="form-label">idUsuario</label>
+                        <input formControlName="idUsuario" type="text" class="form-control" id="idUsuario">
+                        <div class="alert alert-danger mt-2" [hidden]="idUsuario.valid || idUsuario.pristine">
+                            El idUsuario es obligatorio
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="idProducto" class="form-label">idProducto</label>
+                        <input formControlName="idProducto" type="text" class="form-control" id="idProducto">
+                        <div class="alert alert-danger mt-2" [hidden]="idProducto.valid || idProducto.pristine">
+                            El idProducto es obligatorio
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="idVenta" class="form-label">idVenta</label>
+                        <input formControlName="idVenta" type="text" class="form-control" id="idUidVentasuario">
+                        <div class="alert alert-danger mt-2" [hidden]="idVenta.valid || idVenta.pristine">
+                            El idVenta es obligatorio
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="estado" class="form-label">estado</label>
+                        <input formControlName="estado" type="text" class="form-control" id="estado">
+                        <div class="alert alert-danger mt-2" [hidden]="estado.valid || estado.pristine">
+                            El estado es obligatorio
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="fecha" class="form-label">fecha</label>
+                        <input formControlName="fecha" type="text" class="form-control" id="fecha">
+                        <div class="alert alert-danger mt-2" [hidden]="fecha.valid || fecha.pristine">
+                            El fecha es obligatorio
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="cantidad" class="form-label">cantidad</label>
+                        <input formControlName="cantidad" type="text" class="form-control" id="cantidad">
+                        <div class="alert alert-danger mt-2" [hidden]="cantidad.valid || cantidad.pristine">
+                            El cantidad es obligatorio
+                        </div>
+                    </div>
+
+                    <div class="d-grid gap-3 col-6 mx-auto">
+                        <button class="btn btn-primary" [disabled]="formImportaciones.invalid"> Crear importacion</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
