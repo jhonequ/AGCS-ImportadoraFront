@@ -10,7 +10,7 @@ const baseUrl = '';
 
 export class DatosVentaService {
 
-  baseUrl = 'http://localhost:8080/api/proyectoAGCS';
+  baseUrl = 'localhost:8000/AGCS/venta';
 
   constructor(private http: HttpClient) { }
 
