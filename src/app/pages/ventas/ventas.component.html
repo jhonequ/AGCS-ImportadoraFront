@@ -1,32 +1,27 @@
 
-<app-nav></app-nav>
 <div class="container">
   <div class="row">
     <div class=" card">
       <div class="card-body">
         <h1>Crear Venta</h1>
-        <span>{{formVentas.value | json }}</span>
-
-        <form [formGroup]="formVentas" class="row g-3" (ngSubmit)="enviarFormulario()">
-
+        <form  [formGroup]="formVentas" class="row g-3" (ngSubmit)="enviarFormulario()">
+          <span>{{formVentas | json }}</span>
           <div class="col-md-6">
             <label for="codigoVenta" class="form-label">Codigo Venta</label>
             <input formControlName="codigoVenta" type="text" class="form-control" id="codigoVenta">
-            <!--            <div class="alert alert-danger mt-2" [hidden]="codigoVenta.valid || codigoVenta.pristine">
-              El código es obligatorio
+            <div class="alert alert-danger mt-2"
+              [hidden]="formVentas.get('codigoVenta')?.valid || formVentas.get('codigoVenta')?.pristine">
+              El código de venta es obligatorio
             </div>
-          -->
           </div>
           <div class="col-md-6">
             <label for="producto" class="form-label">producto</label>
             <input formControlName="producto" type="text" class="form-control" id="producto">
-            <!-- 
-            <div class="alert alert-danger mt-2" [hidden]="producto.valid || producto.pristine">
+            <div class="alert alert-danger mt-2"
+              [hidden]="formVentas.get('producto')?.valid || formVentas.get('producto')?.pristine">
               El producto es obligatorio
             </div>
-            -->
           </div>
-
           <div class="col-md-6">
             <label for="telefono" class="form-label">telefono</label>
             <input formControlName="telefono" type="number" class="form-control" id="telefono">
@@ -38,21 +33,11 @@
           <div class="col-md-6">
             <label for="estadoProducto" class="form-label">estadoProducto</label>
             <input formControlName="estadoProducto" type="text" class="form-control" id="estadoProducto">
-            <!--
-            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-              <option selected>Abre este menú</option>
-              <option value="1">Uno</option>
-              <option value="2">Dos</option>
-              <option value="3">Tres</option>
-            </select>
-          -->
-
             <div class="alert alert-danger mt-2"
               [hidden]="formVentas.get('estadoProducto')?.valid || formVentas.get('estadoProducto')?.pristine">
               El estado de la venata es obligatoria
             </div>
           </div>
-
           <div class="col-md-6">
             <label for="unidadesDisp" class="form-label">unidadesDisp</label>
             <input formControlName="unidadesDisp" type="text" class="form-control" id="unidadesDisp">
@@ -69,7 +54,6 @@
               El comprador es obligatorio
             </div>
           </div>
-
           <div class="col-md-12">
             <label for="direccionEntrega" class="form-label">direccionEntrega</label>
             <input formControlName="direccionEntrega" type="text" class="form-control" id="direccionEntrega">
@@ -78,7 +62,6 @@
               La dirección es obligatoria
             </div>
           </div>
-
           <div class="col-md-6">
             <label for="correo" class="form-label">correo</label>
             <input formControlName="correo" type="mail" class="form-control" id="correo">
@@ -96,17 +79,11 @@
               La fecha es obligatoria
             </div>
           </div>
-
           <div class="d-grid gap-3 col-6 mx-auto">
             <button class="btn btn-primary"type="submit" [disabled]="!formVentas.valid">Enviar</button>
-            <!--<button class="btn btn-primary" [disabled]="formVentas.invalid"> Crear venta</button>-->
           </div>
-
         </form>
-
       </div>
     </div>
-
   </div>
 </div>
-

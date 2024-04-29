@@ -22,22 +22,12 @@ export class DatosVentaService {
     return this.http.post<any>(this.baseUrl, data);
   }
 
-  actualizarDato(id: number, data: any): Observable<any> {
-    return this.http.put<any>(`${this.baseUrl}/${id}`, data);
+  actualizarDato(codigoVenta: number, data: any): Observable<any> {
+    return this.http.put<any>(`${this.baseUrl}/${codigoVenta}`, data);
   }
 
-  eliminarDato(id: number): Observable<any> {
-    return this.http.delete<any>(`${this.baseUrl}/${id}`);
+  eliminarDato(codigoVenta: number): Observable<any> {
+    return this.http.delete<any>(`${this.baseUrl}/${codigoVenta}`);
   }
-
-
-  /**
-    datosVenta: string[] = ['a', 'b', 'c'];
-
-  guardar(datosVenta: string){
-      this.datosVenta.push(datosVenta);
-  }
-  /**/
-  
 }
 
