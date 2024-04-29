@@ -4,9 +4,7 @@
     <div class=" card">
       <div class="card-body">
         <h1>Crear Producto</h1>
-        <span>{{formProductos.value | json }}</span>
         <form [formGroup]="formProductos" class="row g-3" (ngSubmit)="crearProducto()">
-
           <div class="col-md-6">
             <label for="idProducto" class="form-label">Id Producto</label>
             <input formControlName="idProducto" type="text" class="form-control" id="idProducto">
