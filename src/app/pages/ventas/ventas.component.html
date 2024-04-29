@@ -1,3 +1,4 @@
+
 <app-nav></app-nav>
 <div class="container">
   <div class="row">
@@ -5,21 +6,25 @@
       <div class="card-body">
         <h1>Crear Venta</h1>
         <span>{{formVentas.value | json }}</span>
-        <form [formGroup]="formVentas" class="row g-3" (ngSubmit)="crearVenta()">
+
+        <form [formGroup]="formVentas" class="row g-3" (ngSubmit)="enviarFormulario()">
 
           <div class="col-md-6">
             <label for="codigoVenta" class="form-label">Codigo Venta</label>
             <input formControlName="codigoVenta" type="text" class="form-control" id="codigoVenta">
-            <div class="alert alert-danger mt-2" [hidden]="codigoVenta.valid || codigoVenta.pristine">
+            <!--            <div class="alert alert-danger mt-2" [hidden]="codigoVenta.valid || codigoVenta.pristine">
               El código es obligatorio
             </div>
+          -->
           </div>
           <div class="col-md-6">
             <label for="producto" class="form-label">producto</label>
             <input formControlName="producto" type="text" class="form-control" id="producto">
+            <!-- 
             <div class="alert alert-danger mt-2" [hidden]="producto.valid || producto.pristine">
               El producto es obligatorio
             </div>
+            -->
           </div>
 
           <div class="col-md-6">
@@ -93,7 +98,8 @@
           </div>
 
           <div class="d-grid gap-3 col-6 mx-auto">
-            <button class="btn btn-primary" [disabled]="formVentas.invalid"> Crear venta</button>
+            <button class="btn btn-primary"type="submit" [disabled]="!formVentas.valid">Enviar</button>
+            <!--<button class="btn btn-primary" [disabled]="formVentas.invalid"> Crear venta</button>-->
           </div>
 
         </form>
@@ -103,3 +109,4 @@
 
   </div>
 </div>
+
