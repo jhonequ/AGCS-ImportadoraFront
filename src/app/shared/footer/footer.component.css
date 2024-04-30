@@ -1,3 +1,6 @@
 footer {
+  position: relative;
+  bottom: -50px; /* Adjust value as needed for footer height */
   background-color: black;
 }
+

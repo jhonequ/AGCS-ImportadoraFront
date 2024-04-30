@@ -34,7 +34,6 @@ export class VentasComponent implements OnInit {
   }
 
   obtenerDatos(): void {
-    console.log("Hola!!!");
     this.datosVentaService.obtenerDatos().subscribe(
       datos => this.datos = datos,
       error => console.error(error)
@@ -46,9 +45,9 @@ export class VentasComponent implements OnInit {
       const datosFormulario = this.formVentas.value;
       this.datosVentaService.crearDato(datosFormulario).subscribe(
         response => {
-          console.log(response);
           this.obtenerDatos();
           this.formVentas.reset();
+          alert('se guardo correctamente');
         },
         error => console.error(error)
       )
@@ -63,6 +62,7 @@ export class VentasComponent implements OnInit {
           console.log(response);
           this.obtenerDatos();
           this.formVentas.reset();
+          alert('se Actualizo correctamente');
         },
         error => console.error(error)
       );

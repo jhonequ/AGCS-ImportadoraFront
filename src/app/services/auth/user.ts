@@ -5,5 +5,5 @@ export interface User{
   email:string;
   rol?:string;
   message?:string;
-  password:string;
+  password?:string;
 }

@@ -12,7 +12,7 @@ export class LoginService {
   constructor(private http:HttpClient) { }
 
   currentUserLoginOn: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
-  currentUserData: BehaviorSubject<User> =new BehaviorSubject<User>({id:0, email:'', password:''});
+  currentUserData: BehaviorSubject<User> =new BehaviorSubject<User>({id:0, email:''});
 
   login(credential:LoginRequest): Observable<User>{
     return this.http.get<User>('././assets/data.json')
