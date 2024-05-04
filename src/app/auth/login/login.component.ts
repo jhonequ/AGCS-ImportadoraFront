@@ -9,6 +9,7 @@ import { LoginRequest } from '../../services/auth/loginRequest';
   styleUrl: './login.component.css'
 })
 export class LoginComponent implements OnInit {
+
   loginError:string="";
   loginForm = this.formBuilder.group({
     email:['prueba@gmail.com',[Validators.required,Validators.email]],
